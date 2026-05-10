@@ -64,4 +64,4 @@ fi
 alias ll='ls -lah --color=auto'
 alias wtd='watch --color -n 0.5 ls -lah --color'
 alias dps='sudo watch -n 1 --color '"'"'docker ps --format "{{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Size}}\t{{.Ports}}" | awk '"'"'"'"'"'"'"'"'BEGIN{FS="\t"; printf "\033[1m%-15s %-25s %-20s %-15s %s\033[0m\n","ID","NAMES","STATUS","SIZE","PORTS"} {printf "\033[92m%-15s\033[0m %-25s %-20s %-15s %s\n",$1,$2,$3,$4,$5}'"'"'"'"'"'"'"'"''"'"''
-
+alias dockernuke='docker system prune -a --volumes'
